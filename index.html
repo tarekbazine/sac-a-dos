@@ -5,21 +5,128 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
 </head>
 
 <body>
-  <div class="col-xs-12" style="height : 20px;">
 
-  </div>
-  <div class="container-fluid">
-    <div class="col-md-6" style="height : 500px;">
-
+<header>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col col-xs-3 col-sm-2 col-lg-1 col-md-1 center-block ">
+            <a href="#"><img src="img/knapsack.png" alt="knapsack" class="img-responsive"></a> 
+        </div>  
+        <div class="col col-lg-4 col-sm-3 col-md-4  bg-succes bg-succes text-primary center-block "> 
+          <h2>SAC-A-DOS résolvant</h2>
+        </div>
+        <div class="col col-sm-1 col-md-3 col-lg-3  "></div>
+        <div class="col col-sm-4 col-md-4 col-lg-4 " style="margin-top: 25px"> 
+          <button class="btn btn-primary btn-block">A propos</button>
+        </div>
+      </div>
     </div>
-  </div>
+  </nav>
+</header>
+   <div class="container-bg">
+     <div class="container">
+        <div class="col col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+        <div class="col col-lg-10 col-md-10 col-sm-10 col-xs-10 well">
+          <div class="row">
+                 <h3><span class="label label-default">Problématique</span></h3>
+                 <br>
+                 
+                 <div class="row ">
+                      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 center-block">
+                             <div class="para">
+                               <p>lkdsf dlsfds fldsmkfds fmldsf xmdlfsdf sdmlfkds fsdmlfksdq fdmslkfd   fsdlfksdf sdlmfksd fmsdqkfdfmldkh fdfdmg  gfdmglfdg dfmgdf gmlfdg fdmgf gfpgfdgfd gmfdlg fdglfdg fdgmlfgf dgmfdg fdglfd:g, fdhgf:d,g fdgmfdg.<br>
+                               lfdklgjfdlkglmsdf sldkfsdlmfd sfmldskfds fmldsf dsmkfds fmdsfkd
+                               dsmlfkdlsf mldsfkd mldsfksmdlf.<br>
+                               sdmlfldsf mdsfmsd fùmdsf dmfd sk54f 64d65g mdsfdsfdg
+                               sdfdsgkldsfgkfgkmsdflsdmgkfhgsdgf.</p>
+                              </div>
+                     </div>
+                   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 center-block">
+                        <img src="img/knapsack2.png" class="img-center img-responsive  ">
+                   </div>
+                  </div>
+                 <br>
+                 <hr>
+                 <h3><span class="label label-default">Application</span></h3>
+                 <br>                  
+                   <form action="#" accept-charset="UTF-8" class="form-horizontal">
+                      <div class="form-body">
+                           <div class="form-group ">
+                            <label for="Nom" class="col-md-3 control-label">Wmax</label>
 
-  <script type="text/javascript" src="js/algo.js"></script>
+                            <div class="col-md-4">
+                              <input class="form-control " required="required" name=" name" type="text">
+                            </div>
+                           </div>
+
+                            <div class="form-group">
+                               <label for="Tableau des objets" class="col-md-3 control-label">Tableau des objets</label>
+                               <br>
+                                <!--Le tableau-->
+                                     <div class="container" style="width: 50%">
+                                        <div class="row clearfix">
+                                        <div class="col-md-12 column">
+                                          <table class="table table-bordered table-hover" id="tab_logic">
+                                            <thead>
+                                              <tr >
+                                                <th class="text-center">
+                                                  #
+                                                </th>
+                                                <th class="text-center">
+                                                  v (vateur)
+                                                </th>
+                                                <th class="text-center">
+                                                  w (poids)
+                                                </th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr id='addr0'>
+                                                <td>
+                                                1
+                                                </td>
+                                                <td>
+                                                <input type="text" name='value'  placeholder='valeur' class="form-control"/>
+                                                </td>
+                                                <td>
+                                                <input type="text" name='weight' placeholder='poid' class="form-control"/>
+                                                </td>
+                                              </tr>
+                                              <tr id='addr1'></tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                      <a id="add_row" class="btn btn-default pull-left">Ajouter</a><a id='delete_row' class="pull-right btn btn-default">Supprimer</a>
+                                    </div>
+
+                            </div>
+                         </div>
+                        
+                        <div class="form-actions">
+                          <div class="row">
+                           <div class="col-md-offset-3 col-md-4">
+                             <input class="btn btn-circle green" type="submit" value="Soumettre">
+                           </div>
+                          </div>
+                         </div>        
+                      </form>
+                      </div>
+                 </div>
+          </div>
+        </div>
+      
+    
+  
+  <script type="text/javascript" src="js/algo.js" alt="knapsack problem" >
+  </script>
   <script type="text/javascript" src="js/jquery.js"></script>
-
+  <script type="text/javascript" src="js/tableau.js"> </script>
 </body>
 
 </html>
