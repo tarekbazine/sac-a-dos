@@ -33,22 +33,18 @@ var w = [
 //    int w[] = {0  ,1, 3, 6, 7, 2};
 var mat = [];
 
-// todo optimize this
+// js array two dimension building
 for (var j = 0; j <= W; j++) {
   mat[j] = [];
 }
 
 /*init matrix*/
-// --- omit this when you start j from 0
 for (var i = 0; i < N; i++) {
   mat[i][0] = 0;
 }
-// todo optimize this
-//    for (int j = 0; j <= W; j++) {
-//        mat[0][j] = 0;
-//    }
+
 //this an optimization ???!! we deleting a not-needed row
-for (var j = 0; j <= W; j++) {
+for (var j = 1; j <= W; j++) {
   if (w[0] > j) {
     mat[0][j] = 0;
   } else {
