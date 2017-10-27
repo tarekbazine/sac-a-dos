@@ -21,6 +21,7 @@
   }
   .table{
     margin-top: 20px;
+     margin-bottom: 5px;
   }
   #table-container{
     width: 50% !important
@@ -35,4 +36,26 @@
   }
   .label{
     border-radius: 0px;  
+  }
+  .btn-glyphicon { 
+    padding:8px; 
+    background:#ffffff; 
+    margin-right:4px; 
+  }
+  .icon-btn { 
+    padding: 1px 15px 3px 2px; 
+    border-radius:50px;
+  }
+  .btn-group-lg>.btn, .btn-lg{
+      border-radius:50px !important;
+      padding: 5px 10px;
+
+  }
+
+  .formula_img{
+      width: 50% ;
+      height: 25% ;
+      max-width: 50% ;
+      max-height: 25% ;
+      border: 1px solid gray ;
   }
