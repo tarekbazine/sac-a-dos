@@ -54,20 +54,45 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col col-xs-3 col-sm-2 col-lg-1 col-md-1 center-block ">
-                    <a href="#"><img src="img/knapsack.png" alt="knapsack" class="img-responsive"></a>
+                    <a href="index.html"><img src="img/knapsack.png" alt="knapsack" class="img-responsive"></a>
                 </div>
                 <div class="col col-lg-4 col-sm-3 col-md-4  bg-succes bg-succes text-primary center-block ">
                     <h2>SAC-A-DOS Résolvant</h2>
                 </div>
                 <div class="col col-sm-1 col-md-3 col-lg-3  "></div>
                 <div class="col col-sm-4 col-md-4 col-lg-4 " style="margin-top: 25px">
-                    <button class="btn btn-primary btn-block">A propos</button>
+                    <button type="button" class="btn btn-primary btn-block"  data-toggle="modal" data-target="#aprpos">A propos</button>
                 </div>
             </div>
         </div>
     </nav>
 </header>
 
+                            <!-- Modal -->
+                            <div class="modal fade" id="aprpos" role="dialog" style="">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title"><b>SAC-A-DOS Résolvant</b></h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><b>Développé par:</b><br>
+                                                BAZINE Tarek <br>
+                                                CHIKH AISSA Mahfoud <br><br>
+                                                <b>Dirigé par:</b><br>
+                                                M. HADIM B<br><br>
+                                                Tous les droits sont réservés ESI/SIL-2017</p>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+<!-- page bady -->
 <div class="container-fluid">
     <div class="row">
         <h3 class="col-md-3 col-md-offset-4"
@@ -170,7 +195,7 @@
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
-
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
