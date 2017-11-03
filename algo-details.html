@@ -8,7 +8,7 @@
     <!--****ESI 2017/18 TPGO TP1****-->
     <!--****************************************/-->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/wan-spinner.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <style>
         @font-face {
             font-family: 'Changa';
@@ -168,11 +168,7 @@
         <h2 class="col-md-offset-3 col-md-6"
             style="text-decoration: underline;">Algorithme:</h2>
         <div class="col-md-3">
-            <div class="wan-spinner wan-spinner-3" style="border-color: rgb(192, 57, 43);">
-                <a href="javascript:void(0)" class="minus" style="padding: 0">-</a>
-                <input type="text" value="1" style="width: 50px;">
-                <a href="javascript:void(0)" class="plus" style="padding: 0">+</a>
-            </div>
+            <input value="0.5" id="spinner" style="width: 70px;"/>
         </div>
     </div>
     <div class="row">
@@ -222,7 +218,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/wan-spinner.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript">
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -242,46 +238,22 @@
         }
 
         /*init spinner*/
-        $(".demo").WanSpinner({
-            // maximum value
-            maxValue: 20,
-
-// minimum value
-            minValue: 0,
-
-// custom step
-            step: 0.5,
-
-// starting value
-            start: 0.5,
-
-// width of the text input
-            inputWidth: 40,
-
-// callbakcs
-            plusClick: function(element, val) {
-                return true;
-            },
-
-            minusClick: function(element, val) {
-                return true;
-            },
-
-            exceptionFun: function(exp) {
-                return true;
-            },
-
-            valueChanged: function(element, val) {
-                if(!isNumber(val)){
-                    alert('plz take avilid number !!');
-                    location = location;
+        $(function() {
+            $('#spinner').spinner({
+                min: 0,
+                max: 200,
+                step: 0.5,
+                spin: function( event, ui ) {
+                    console.log(ui);
+                    console.log(ui.value);
+                    if(!isNumber(ui.value)){
+                        alert('plz take avilid number !!');
+                        location = location;
+                    }
+                    algo_speed = parseInt(ui.value)*1000;
                 }
-                algo_speed = parseInt(val)*1000;
-                return true;
-            }
-
+            });
         });
-
         /*end init spinner*/
 
         var N = parseInt($.cookie('N'));
