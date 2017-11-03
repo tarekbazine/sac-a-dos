@@ -8,6 +8,7 @@
     <!--****ESI 2017/18 TPGO TP1****-->
     <!--****************************************/-->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/wan-spinner.css" type="text/css">
     <style>
         @font-face {
             font-family: 'Changa';
@@ -61,36 +62,38 @@
                 </div>
                 <div class="col col-sm-1 col-md-3 col-lg-3  "></div>
                 <div class="col col-sm-4 col-md-4 col-lg-4 " style="margin-top: 25px">
-                    <button type="button" class="btn btn-primary btn-block"  data-toggle="modal" data-target="#aprpos">A propos</button>
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#aprpos">A
+                        propos
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 </header>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="aprpos" role="dialog" style="">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title"><b>SAC-A-DOS Résolvant</b></h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p><b>Développé par:</b><br>
-                                                BAZINE Tarek <br>
-                                                CHIKH AISSA Mahfoud <br><br>
-                                                <b>Dirigé par:</b><br>
-                                                M. HADIM B<br><br>
-                                                Tous les droits sont réservés ESI/SIL-2017</p>
+<!-- Modal -->
+<div class="modal fade" id="aprpos" role="dialog" style="">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><b>SAC-A-DOS Résolvant</b></h4>
+            </div>
+            <div class="modal-body">
+                <p><b>Développé par:</b><br>
+                    BAZINE Tarek <br>
+                    CHIKH AISSA Mahfoud <br><br>
+                    <b>Dirigé par:</b><br>
+                    M. HADIM B<br><br>
+                    Tous les droits sont réservés ESI/SIL-2017</p>
 
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- page bady -->
 <div class="container-fluid">
@@ -100,29 +103,34 @@
     </div>
 
     <div class="row text-center">
-        <table class="table table-bordered center-block">
 
-            <tbody>
-            <tr>
-                <th scope="row">W</th>
-                <td id="W-val"></td>
-            </tr>
-           </tbody>
+        <div class="col-md-7">
+            <table class="table table-bordered pull-right">
 
-        </table>
+                <tbody id="arr-input">
+                <tr id="v-arr">
+                    <th scope="row">v</th>
+                </tr>
+                <tr id="w-arr">
+                    <th scope="row">w</th>
+                </tr>
+                </tbody>
 
-        <table class="table table-bordered center-block">
+            </table>
+        </div>
 
-            <tbody id="arr-input">
-            <tr id="v-arr">
-                <th scope="row">v</th>
-            </tr>
-            <tr id="w-arr">
-                <th scope="row">w</th>
-            </tr>
-            </tbody>
+        <div class="col-md-5">
+            <table class="table table-bordered">
 
-        </table>
+                <tbody>
+                <tr>
+                    <th scope="row">W</th>
+                    <td id="W-val"></td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
     </div>
 
     <div class="row">
@@ -146,47 +154,65 @@
         </table>
     </div>
     <br>
-    <p>
-    <h2 class="col-md-offset-3 col-md-6"
-        style="text-decoration: underline;">Algorithme:</h2>
+    <div id="solution" class="" style="display: none">
+        <h2 class="col-md-offset-3 col-md-6">
+            <span style="text-decoration: underline;">Solutions: </span>
+            <span style="font-size: 0.7em;text-decoration: none;">&nbsp; les objets selectionés</span></h2>
+        <div class="row">
+            <div id="slc-obj" class="col-md-offset-3 col-md-6">
+
+            </div>
+        </div>
+    </div>
     <div class="row">
-        <div class="col-md-offset-3 col-md-6">
+        <h2 class="col-md-offset-3 col-md-6"
+            style="text-decoration: underline;">Algorithme:</h2>
+        <div class="col-md-3">
+            <div class="wan-spinner wan-spinner-3" style="border-color: rgb(192, 57, 43);">
+                <a href="javascript:void(0)" class="minus" style="padding: 0">-</a>
+                <input type="text" value="1" style="width: 50px;">
+                <a href="javascript:void(0)" class="plus" style="padding: 0">+</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6 first-loop">
             Pour i allant de 1 a N
         </div>
     </div>
     <div class="row">
-        <div class="col-md-offset-3 col-md-6">
+        <div class="col-md-offset-3 col-md-6 first-loop">
             &nbsp;&nbsp;Faire
         </div>
     </div>
     <div class="row">
-        <div class="col-md-offset-3 col-md-6">
+        <div class="col-md-offset-3 col-md-6 scnd-loop">
             &nbsp;&nbsp;&nbsp;&nbsp; Pour j allant de 0 a W
         </div>
     </div>
     <div class="row">
-        <div class="col-md-offset-3 col-md-6">
+        <div class="col-md-offset-3 col-md-6 scnd-loop">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Faire
         </div>
     </div>
     <div class="row">
-        <div class="col-md-offset-3 col-md-6">
+        <div class="col-md-offset-3 col-md-6 if-wi">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Si w[i] > j Alors mat[i][j] = mat[i - 1][j];
         </div>
     </div>
     <div class="row">
-        <div class="col-md-offset-3 col-md-6">
+        <div class="col-md-offset-3 col-md-6 if-max">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sinon mat[i][j] = max(v[i] + mat[i - 1][j - w[i]], mat[i -
             1][j]);
         </div>
     </div>
     <div class="row">
-        <div class="col-md-offset-3 col-md-6">
+        <div class="col-md-offset-3 col-md-6 scnd-loop">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fpour
         </div>
     </div>
     <div class="row">
-        <div class="col-md-offset-3 col-md-6">
+        <div class="col-md-offset-3 col-md-6 first-loop">
             &nbsp;&nbsp; Fpour
         </div>
     </div>
@@ -196,6 +222,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/wan-spinner.js"></script>
 <script type="text/javascript">
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -207,6 +234,55 @@
     }
 
     async function draw() {
+
+        var algo_speed= 500;
+
+        function isNumber(n){
+            return typeof(n) != "boolean" && !isNaN(n);
+        }
+
+        /*init spinner*/
+        $(".demo").WanSpinner({
+            // maximum value
+            maxValue: 20,
+
+// minimum value
+            minValue: 0,
+
+// custom step
+            step: 0.5,
+
+// starting value
+            start: 0.5,
+
+// width of the text input
+            inputWidth: 40,
+
+// callbakcs
+            plusClick: function(element, val) {
+                return true;
+            },
+
+            minusClick: function(element, val) {
+                return true;
+            },
+
+            exceptionFun: function(exp) {
+                return true;
+            },
+
+            valueChanged: function(element, val) {
+                if(!isNumber(val)){
+                    alert('plz take avilid number !!');
+                    location = location;
+                }
+                algo_speed = parseInt(val)*1000;
+                return true;
+            }
+
+        });
+
+        /*end init spinner*/
 
         var N = parseInt($.cookie('N'));
         var W = parseInt($.cookie('W'));
@@ -256,62 +332,103 @@
             mat[i][0] = 0;
         }
 
+        var row,
+                frst_loop = $('.first-loop'),
+                scnd_loop = $('.scnd-loop'),
+                if_wi = $(".if-wi"),
+                if_max = $('.if-max');
         //this an optimization ???!! we deleting a not-needed row
         row1 = $('#i1 > th');
+        frst_loop.css('backgroundColor', '#92a8d1');
+        await sleep(algo_speed);
+        frst_loop.css('backgroundColor', '');
         for (var j = 1; j <= W; j++) {
+            scnd_loop.css('backgroundColor', '#80ced6');
+            await sleep(algo_speed);
+            scnd_loop.css('backgroundColor', '');
             if (w[0] > j) {
+                if_wi.css('backgroundColor', '#f18973');
+                row1[j + 1].style.backgroundColor = '#f18973';
                 row1[j + 1].innerHTML = 0;
-                await sleep(400);
+                await sleep(algo_speed);
                 mat[0][j] = 0;
+                if_wi.css('backgroundColor', '');
             } else {
+                if_max.css('backgroundColor', '#82b74b');
+                row1[j + 1].style.backgroundColor = '#82b74b';
                 row1[j + 1].innerHTML = w[0];
-                await sleep(400);
                 mat[0][j] = v[0];
+                await sleep(algo_speed);
+                if_max.css('backgroundColor', '');
             }
+            row1[j + 1].style.backgroundColor = '';
         }
 
-        var row;
         for (var i = 1; i < N; i++) {
             row = $('#i' + (i + 1) + ' > th');
+            frst_loop.css('backgroundColor', '#92a8d1');
+            await sleep(algo_speed);
+            frst_loop.css('backgroundColor', '');
             for (var j = 0; j <= W; j++) {
+                scnd_loop.css('backgroundColor', '#80ced6');
+                await sleep(algo_speed);
+                scnd_loop.css('backgroundColor', '');
                 if (w[i] > j) {
                     mat[i][j] = mat[i - 1][j];
-                    row[j + 1].style.backgroundColor = 'red';
-                    await sleep(400);
+                    if_wi.css('backgroundColor', '#f18973');
+                    row[j + 1].style.backgroundColor = '#f18973';
+                    await sleep(algo_speed);
+                    if_wi.css('backgroundColor', '');
                 } else {
                     mat[i][j] = max(v[i] + mat[i - 1][j - w[i]], mat[i - 1][j]);
-                    row[j + 1].style.backgroundColor = 'green';
-                    await sleep(400);
+                    if_max.css('backgroundColor', '#82b74b');
+                    row[j + 1].style.backgroundColor = '#82b74b';
+                    await sleep(algo_speed);
+                    if_max.css('backgroundColor', '');
                 }
                 row[j + 1].innerHTML = mat[i][j];
                 row[j + 1].style.backgroundColor = '';
             }
         }
 
+
+
         //printing results
-        //matrix
-        //    for (var i = 0; i < N; i++) {
-        //        for (var j = 0; j <= W; j++) {
-        //            console.log(mat[i][j]);
-        //        }
-        //        console.log("\n");
-        //    }
-        //
-        //    //    //the optimal weight
-        //    console.log("\n\nthe optimal weight " + mat[N - 1][W] + " \n\n");
-        //
-        //    //list of the selected objects
-        //    var j = W;
-        //    for (var i = N - 1; i > 0; i--) {
-        //        if ((mat[i][j] == 0)) {
-        //            console.log("fin");
-        //            break;
-        //        }
-        //        if ((mat[i][j] != mat[i - 1][j])) {
-        //            console.log("object num " + (i + 1) + " has been selected \n");
-        //            j = j - w[i];
-        //        }
-        //    }
+        //list of the selected objects
+        var selectedOject = [];
+        var j = W, selected_objs = $('#slc-obj');
+        $('#solution').show();
+        for (var i = N - 1; i > 0; i--) {
+            row = $('#i' + (i + 1) + ' > th');
+            row[j + 1].style.backgroundColor = '#77a8a8';
+            await sleep(algo_speed);
+            if ((mat[i][j] == 0)) {
+                console.log("fin");
+                break;
+            }
+            if ((mat[i][j] != mat[i - 1][j])) {
+                selectedOject.push(i);
+                row[j + 1].style.backgroundColor = '#b5e7a0';
+                console.log("object num " + (i + 1) + " has been selected \n");
+                j = j - w[i];
+                selected_objs.append('<span style="background-color: #b5e7a0;' +
+                        'padding: 5px;margin: 5px">' +
+                        'object ' + (i + 1) +
+                        '</span>');
+                continue;
+            }
+            row[j + 1].style.backgroundColor = '';
+        }
+        if ((mat[0][j] != 0)) {
+            row = $('#i1 > th');
+            row[j + 1].style.backgroundColor = '#b5e7a0';
+            selected_objs.append('<span style="background-color: #b5e7a0;' +
+                    'padding: 5px;margin: 5px">' +
+                    'object 1' +
+                    '</span>');
+            selectedOject.push(0);
+            console.log("object num 0 has been selected \n");
+        }
 
     }
 
