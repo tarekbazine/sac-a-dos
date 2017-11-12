@@ -164,6 +164,20 @@
 
             </div>
         </div>
+        <div class="row" style="margin-top: 20px; font-size: 25px">
+            <div class="col-md-offset-3 col-md-2">
+                Poids total
+            </div>
+            <div id="solution-w-total" class="col-md-1">
+
+            </div>
+            <div class="col-md-2">
+                Gain total
+            </div>
+            <div id="solution-v-total" class="col-md-1">
+
+            </div>
+        </div>
     </div>
     <div class="row">
         <h2 class="col-md-offset-3 col-md-6"
@@ -248,7 +262,7 @@
                     console.log(ui);
                     console.log(ui.value);
                     if(!isNumber(ui.value)){
-                        alert('plz take avilid number !!');
+                        alert('plz take a vilid number !!');
                         location = location;
                     }
                     algo_speed = parseInt(ui.value)*1000;
@@ -402,6 +416,15 @@
             selectedOject.push(0);
             console.log("object num 0 has been selected \n");
         }
+
+        var totalGain=0,totalPoids=0;
+        for (var i =0;i<selectedOject.length;i++){
+            totalGain += v[selectedOject[i]];
+            totalPoids += w[selectedOject[i]];
+        }
+
+        $('#solution-w-total')[0].innerHTML=totalPoids;
+        $('#solution-v-total')[0].innerHTML=totalGain;
 
     }
 
